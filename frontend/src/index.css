@@ -1,0 +1,214 @@
+* {
+  padding:0;
+  box-sizing: border-box;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+}
+*::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none; 
+  scrollbar-width: none; 
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#theme{
+  display: none;
+}
+
+#theme:checked ~ .App {
+  filter: invert(1);
+}
+
+.App {
+  max-width: 100%;
+  min-height: 100vh;
+  background: white;
+}
+
+.main {
+  max-width: 1400px;
+  width: 100%;
+  margin: auto;
+}
+
+.large-avatar {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.big-avatar {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.medium-avatar {
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.small-avatar {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.supper-avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.header {
+  width: 100%;
+  min-height: 70px;
+  position: sticky;
+  top:0;
+  left:0;
+  bottom: 0;
+  right:0;
+  z-index: 2;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.header .navbar {
+  width: 100%;
+}
+
+.header .menu li {
+  opacity: 0.6;
+}
+
+.header .menu li.active {
+  opacity: 1;
+}
+
+.header .menu .material-icons {
+  font-size: 30px;
+}
+
+.header .menu .dropdown-menu{
+  position: absolute;
+  left: inherit;
+  right:0;
+}
+
+.header .menu label {
+  cursor: pointer;
+}
+
+.header .close-search {
+  position: absolute;
+  cursor: pointer;
+  font-weight: 900;
+  color: crimson;
+}
+
+.header .users {
+  position: absolute;
+  width:100%;
+  min-width: 100px;
+  background: #fafafa;
+  top: 100%;
+  padding-right: 2%;
+  overflow: auto;
+  margin-top: 3px; 
+}
+
+
+
+@media(max-width: 766px){
+  .header .navbar .logo {
+    display: none;
+  }
+  .header .menu{
+    position: absolute;
+    width: 100%;
+    left:0;
+    top: calc(100vh - 50px);
+    bottom: 0;
+    height: 50px;
+    box-shadow: 0 0 10px #ddd;
+    z-index: 2;
+    background: #f8f9fa;
+  }
+  .header .menu .navbar-nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .header .menu .dropdown-menu {
+    bottom: 100%;
+    top: auto;
+  }
+  .header .users {
+    position: absolute;
+    width:95%;
+    overflow: hidden;
+    min-width: 100px;
+    background: #fafafa;
+    top: 100%;
+    padding-right: 2%;
+    overflow: auto;
+    margin-top: 3px; 
+  }
+
+  .header .form-inline {
+    width: 100%;
+  }
+  .header .material-icons {
+    color: #000;
+  }
+  .header .navbar-brand {
+    margin: auto;
+    font-size: 1rem;
+  }
+  .message {
+    height: calc(100vh - 160px)
+  }
+
+  .right_mess {
+    display: none;
+  }
+
+  .status {
+    padding: 20px 10px;
+  }
+
+}
+
+.mode {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+@import url("./styles/auth.css");
+@import url("./styles/profile.css");
+@import url("./styles/editprofile.css");
+@import url("./styles/home.css");
+@import url("./styles/status_modal.css");
+@import url("./styles/inputComment.css");
+@import url("./styles/discoveryDisplay.css");
+@import url("./styles/header.css");
+@import url("./styles/message.css");
+@import url("./styles/icons.css");
+@import url("./styles/call_modal.css");
